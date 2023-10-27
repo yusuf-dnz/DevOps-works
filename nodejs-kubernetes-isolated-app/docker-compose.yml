@@ -1,0 +1,8 @@
+version: "3"
+services:
+  web:
+    image: node-web-app:latest
+    container_name: c_node-web-app
+    build: .
+    ports:
+      - "3000:3000"
