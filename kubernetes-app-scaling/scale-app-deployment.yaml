@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scale-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: scale-app
+  template:
+    metadata:
+      labels:
+        app: scale-app
+    spec:
+      containers:
+        - name: scale-app
+          imagePullPolicy: IfNotPresent
+          image: scale-app-image:latest
+          resources:
+            limits:
+              cpu: 200m
+              # memory: 256Mi
+            requests:
+              cpu: 100m
+            # memory: 128Mi
+
+          ports:
+            - containerPort: 3000

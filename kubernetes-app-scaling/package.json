@@ -1,0 +1,14 @@
+{
+  "name": "scale-app",
+  "version": "1.0.0",
+  "description": "Node.js uygulaması",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "ysfdn",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
