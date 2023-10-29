@@ -3,7 +3,7 @@
 ## Uygulama Adımları
 Örnek olarak daha önce kullandığımız node.js web uygulamamızı bir docker container içerisinde barındıracak şekilde image oluşturalım.
 
-![image](https://github.com/LOG-IN-DEVOPS-BOOTCAMP/kubernetes-assignment-2-yusuf-dnz/assets/101550162/4fbdec75-64ff-442d-9cd8-c478565200ed)
+![image](https://github.com/yusuf-dnz/DevOps-works/assets/101550162/945b1018-7444-4d94-b151-2b498aac4d1a)
 
 Docker imajını oluşturmak için aşağıdaki komutu kullanın:
 ```shell
@@ -17,7 +17,7 @@ Yük dengelemesi için LoadBalancer servisini kullanacağız, gerekli konfigüra
 ```shell
 kubectl apply -f LoadBalancer.yaml
 ````
-![image](https://github.com/LOG-IN-DEVOPS-BOOTCAMP/kubernetes-assignment-2-yusuf-dnz/assets/101550162/37a95a7c-181e-4097-9914-8f2d33768e68)
+![image](https://github.com/yusuf-dnz/DevOps-works/assets/101550162/1976fe47-1857-4c49-b5ff-277ef6027d09)
 
 Uygulamamız şuanda ölçeklenebilir durumda deploy edildi, scale işlemini iki şekilde yapabiliriz.
 
@@ -26,7 +26,7 @@ Manuel olarak komut girerek bu işlemi yapabiliriz.
 ```shell
 kubectl scale deployment scale-app-deployment --replicas=5
 ````
-![image](https://github.com/LOG-IN-DEVOPS-BOOTCAMP/kubernetes-assignment-2-yusuf-dnz/assets/101550162/f9c90636-50cd-4829-8cb9-3e24bdc1bf82)
+![image](https://github.com/yusuf-dnz/DevOps-works/assets/101550162/097b11d8-b637-4370-9a81-72ef4fcd2b20)
 
 Ölçekle işlevi bu kadarla kalmamakta, Auto Scaling yöntemi ile kaynak ve belirli metrikler belirterek uygulamanızın ölçeklenmesini ve gelen request'lere dayanıklı hale gelmesini sağlayabilirsiniz.
 - Horizontal ve vertical scale çeşitleri uygulamanızı kullanım senaryosuna göre ölçeklemenize olanak verir, Horizontal pods autoscale(HPA) yatay ölçeklendirme için:
